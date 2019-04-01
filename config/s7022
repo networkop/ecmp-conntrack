@@ -1,0 +1,145 @@
+load-interval default 5
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname s7022
+ip name-server vrf default 10.21.227.52
+ip name-server vrf default 10.21.226.222
+ip domain-name lab.local
+!
+ntp server 10.21.227.52
+!
+snmp-server community private rw
+snmp-server community netconanRemoved0 ro
+!
+spanning-tree mode mstp
+!
+aaa authorization exec default local
+!
+no aaa root
+!
+username admin privilege 15 role network-fb4471 nopassword
+!
+interface Ethernet1
+!
+interface Ethernet2
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Ethernet9
+!
+interface Ethernet10
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Ethernet13
+!
+interface Ethernet14
+!
+interface Ethernet15
+!
+interface Ethernet16
+!
+interface Ethernet17
+!
+interface Ethernet18
+!
+interface Ethernet19
+!
+interface Ethernet20
+!
+interface Ethernet21
+!
+interface Ethernet22
+!
+interface Ethernet23
+!
+interface Ethernet24
+!
+interface Ethernet25
+!
+interface Ethernet26
+!
+interface Ethernet27
+!
+interface Ethernet28
+!
+interface Ethernet29
+!
+interface Ethernet30
+!
+interface Ethernet31
+!
+interface Ethernet32
+!
+interface Ethernet33
+!
+interface Ethernet34
+!
+interface Ethernet35
+!
+interface Ethernet36
+!
+interface Ethernet37
+!
+interface Ethernet38
+!
+interface Ethernet39
+!
+interface Ethernet40
+!
+interface Ethernet41
+!
+interface Ethernet42
+!
+interface Ethernet43
+!
+interface Ethernet44
+!
+interface Ethernet45
+!
+interface Ethernet46
+!
+interface Ethernet47
+!
+interface Ethernet48
+!
+interface Ethernet49
+   no switchport
+   ip address 57.37.147.4/24
+!
+interface Ethernet50
+!
+interface Ethernet51
+!
+interface Ethernet52
+!
+interface Ethernet53
+!
+interface Ethernet54
+!
+interface Management1
+   ip address 10.21.227.212/22
+!
+ip access-list ANY
+   10 permit ip any any
+!
+ip route 0.0.0.0/0 10.21.227.1
+ip route 0.3.79.5/32 57.37.147.3
+ip route 14.88.20.0/24 57.37.147.3
+!
+ip routing
+!
+end
